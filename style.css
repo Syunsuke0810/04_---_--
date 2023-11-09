@@ -1,0 +1,231 @@
+
+    #body{
+      /* background-color: rgb(240, 220, 220); */
+      background-image: url(img/レトロ背景.png);     /* 背景画像指定 */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      /* これだと全体的に左による */
+      /* margin-right: 100px; */
+    }
+
+    header{
+      background-image:url(img/ジーズ保育園.png);
+      padding: 5px;
+      border: 9px solid #ffffff6d;
+      width: 780px;
+      height: 190px;
+      margin-bottom: 30px;
+      margin-right: 100px;
+    }
+
+    #name{
+      height: 2.4em;
+      width: 100%;
+      padding: 0 16px;
+      border-radius: 4px;
+      border: none;
+      box-shadow: 0 0 0 4px rgb(108, 104, 104) inset;
+      appearance: none;
+      width: 250px;
+      height: 30px;
+      margin-right: 300px; 
+      -webkit-appearance: none;
+      -moz-appearance: none;  
+      }
+
+    
+
+    /* h1をやめて画像を作ったの */
+    /* .menmo{
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     
+    } */
+
+
+    #viwe{
+      min-width: 250px;
+      min-height: 400px;
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 10px;  
+      margin-right: 300px; 
+      height: 2.4em;
+      width: 40%;
+      padding: 0 16px;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 0 0 4px rgb(108, 104, 104) inset;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+
+    }
+
+    #view:focus{
+      outline: 0;
+      box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
+    }
+
+    .button1{
+      display: flex;
+      justify-content: space-around;
+    }
+    
+    #save{
+      padding: 0.5em;
+      margin: 10px 0;
+      display: block;
+      color: #fff !important;
+      background: #6FB83F;
+      text-decoration: none;
+      font-weight: bold;
+      font-size:16px;
+      border-radius: 3px;
+      text-align:center;
+      text-decoration:none !important;
+    }
+
+    #save:before {
+      content: "";
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin: -3px 5px 0 0;
+      /* background: url("画像URL") no-repeat; */
+      background-size: contain;
+      vertical-align: middle;
+    }
+
+    #save:hover {
+      background: #979f92;
+    }
+    @media screen and (min-width: 768px){
+      #save{
+        padding: 0.5em 2em;
+        margin: 10px auto;
+        font-size:20px;
+        display:inline-block;
+      }
+      #save:before {
+        margin: -3px 10px 0 0;
+      }
+    }
+
+    #call{
+      padding: 0.5em;
+      margin: 10px 0;
+      display: block;
+      color: #fff !important;
+      background: #6FB83F;
+      text-decoration: none;
+      font-weight: bold;
+      font-size:16px;
+      border-radius: 3px;
+      text-align:center;
+      text-decoration:none !important;
+    }
+
+    #call:before {
+      content: "";
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin: -3px 5px 0 0;
+      background: url("画像URL") no-repeat;
+      background-size: contain;
+      vertical-align: middle;
+    }
+
+    #call:hover {
+      background: #979f92;
+    }
+    @media screen and (min-width: 768px){
+      #save{
+        padding: 0.5em 2em;
+        margin: 10px auto;
+        font-size:20px;
+        display:inline-block;
+      }
+      #save:before {
+        margin: -3px 10px 0 0;
+      }
+    }
+
+    #delete{
+      padding: 0.5em;
+      margin: 10px 0;
+      display: block;
+      color: #fff !important;
+      background: #6FB83F;
+      text-decoration: none;
+      font-weight: bold;
+      font-size:16px;
+      border-radius: 3px;
+      text-align:center;
+      text-decoration:none !important;
+    }
+
+    #delete:before {
+      content: "";
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin: -3px 5px 0 0;
+      background: url("画像URL") no-repeat;
+      background-size: contain;
+      vertical-align: middle;
+    }
+
+    #delete:hover {
+      background: #979f92;
+    }
+    @media screen and (min-width: 768px){
+      #delete{
+        padding: 0.5em 2em;
+        margin: 10px auto;
+        font-size:20px;
+        display:inline-block;
+      }
+      #delete:before {
+        margin: -3px 10px 0 0;
+      }
+    }
+
+    #list{
+      margin-left: 300px;
+      margin-top: -500px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+   *{
+     padding: 0px 5px;
+   }
+
+   ul li{
+     border-bottom: 2px solid orange;
+     margin-bottom: 10px;
+     list-style: none;
+   }
+
+   /* メモリストの項目を中央揃えにする */
+    #list {
+    text-align: center;
+    }
+
+   #t{
+    /* 右側のフォントだよ */
+     border-bottom: 2px solid #51544e !important;
+     text-align: right;
+     color: black;
+     font-size: 18px;
+     font-weight: bold;
+   }
+  
+  input{
+    margin-bottom: 40px;
+  }

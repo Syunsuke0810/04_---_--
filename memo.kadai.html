@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>memo_kadai</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body id="body">
+
+  <header>
+    <h1 class="memo"></h1>
+  </header>
+
+  
+  <form id="f">
+
+    <input style="background-color:transparent;" type="search" id="name" placeholder="日付／タイトル"> 
+
+    <textarea style="background-color:transparent;" id="viwe" placeholder="みなさまのお声を聞かせてください" ></textarea>
+    
+    
+  <div class="button1">
+    <input type="button" id="save" value="意見を送る">
+
+    <input type="button" id="call" value="やっぱり送らない">
+
+    <input type="button" id="delete" value="全部消す">
+  </div>
+
+  </form>
+
+   <ul id="list">
+      <li id="t"></li>
+    </ul>
+
+    <script>
+      const savebtn=document.getElementById('save');
+      const callbtn=document.getElementById('call');
+      const tarea=document.getElementById('viwe');
+      const namearea=document.getElementById('name');
+      const list =document.getElementById('list');
+      const del=document.getElementById('delete');
+
+      window.onload=function DATALOAD(){
+        //console.log("111");
+        var datacount=localStorage.length;
+
+        console.log(datacount);
+        switch(datacount){
+          case 0:
+          console.log('no data...');
+          document.getElementById('t').innerHTML='今月のご相談はございません';
+          break;
+
+          default:
+
+           document.getElementById('t').innerHTML='ご返答返答(↓クリックして表示)';
+
+
+          for (let step = 0; step < datacount; step++) {
+          // 値が 0 から 4 まで計 5 回実行される
+          //console.log('一歩西に歩く');
+
+         
+
+          var calling =localStorage.key(step);
+
+          console.log(calling);
+
+          const make =document.createElement('li');
+
+          list.appendChild(make);
+
+          make.id=step;
+
+          document.getElementById(step).innerHTML=calling;
+
+          document.getElementById(step).onclick=function call(){
+
+            var aaa= document.getElementById(step).textContent;
+
+            namearea.value=aaa;
+
+
+            const dataname=namearea.value;
+
+                    var calldata=localStorage.getItem(dataname);
+
+                    console.log(calldata);
+
+                    tarea.value=calldata;
+                    
+                    }
+          }
+
+        }
+
+      }
+
+      savebtn.onclick=function SAVE(){
+
+        var result = window.confirm('上書き保存しますか？');
+
+        if( result ) {
+            console.log('OKがクリックされました');
+
+          const data=tarea.value;
+                  console.log(data);
+
+                  const dataname=namearea.value;
+                  console.log(dataname);
+
+                  localStorage.setItem(dataname,data);
+
+                  var calldata=localStorage.getItem(dataname);
+
+                  console.log(calldata);
+
+                  console.log("保存完了");
+
+                  location.reload();
+
+        }
+        else {
+            console.log('キャンセルがクリックされました');
+        }
+
+        
+
+      }
+
+      callbtn.onclick=function DATACALL(){
+
+        tarea.value="";
+        namearea.value="";
+
+      }
+
+
+      del.onclick=function DELETE(){
+
+        var result = window.confirm('消去しますか？');
+
+        if( result ) {
+            console.log('OKがクリックされました');
+
+        const dnn=namearea.value;
+
+        localStorage.removeItem(dnn);
+
+        location.reload();
+        }else{
+          console.log('キャンセル');
+        }
+
+      }
+
+    </script>
+
+
+  
+
+</body>
+</html>
